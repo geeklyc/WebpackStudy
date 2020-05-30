@@ -1,4 +1,13 @@
+@font-face {
+  font-family: 'MyFont';
+  src:  url('./Jotia W00 Light.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-size: 72;
+}
+
 .hello {
     color: red;
     background: url('./icon.jpg');
+    font-family: 'MyFont';
   }
