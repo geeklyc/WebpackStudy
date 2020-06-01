@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: liyoucheng
  * @Date: 2020-05-25 14:30:58
- * @LastEditTime: 2020-05-30 17:24:20
+ * @LastEditTime: 2020-05-30 17:49:14
  * @LastEditors: liyoucheng
 --> 
 # WebpackStudy
@@ -56,3 +56,15 @@ font（.woff格式可以）
   ]
 }
 ```
+
+自动生成index.html,包含打包的.js
+```
+HtmlWebpackPlugin
+```
+
+清理dist文件
+```
+CleanWebpackPlugin
+```
+https://www.cnblogs.com/duoge/p/11524456.html
+
