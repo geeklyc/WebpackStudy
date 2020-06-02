@@ -2,27 +2,30 @@
  * @Description: 
  * @Author: liyoucheng
  * @Date: 2020-05-30 16:07:23
- * @LastEditTime: 2020-06-02 14:13:48
+ * @LastEditTime: 2020-06-02 14:21:35
  * @LastEditors: liyoucheng
  */ 
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
     app: './src/index.js',
-    print: './src/print.js'
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Output Management'
-    })
+    }),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ],
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    hot: true
   },
   output: {
     filename: '[name].bundle.js',

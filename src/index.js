@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: liyoucheng
+ * @Date: 2020-05-30 16:07:23
+ * @LastEditTime: 2020-06-02 14:22:12
+ * @LastEditors: liyoucheng
+ */ 
 // /*
 //  * @Description: 
 //  * @Author: liyoucheng
@@ -43,3 +50,10 @@ function component() {
 }
 
 document.body.appendChild(component());
+
+if (module.hot) {
+  module.hot.accept('./print.js', function() {
+    console.log('Accepting the updated printMe module!');
+    printMe();
+  })
+}
