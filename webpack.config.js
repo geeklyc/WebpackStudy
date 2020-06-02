@@ -1,3 +1,10 @@
+/*
+ * @Description: 
+ * @Author: liyoucheng
+ * @Date: 2020-05-30 16:07:23
+ * @LastEditTime: 2020-06-02 14:13:48
+ * @LastEditors: liyoucheng
+ */ 
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -13,6 +20,10 @@ module.exports = {
       title: 'Output Management'
     })
   ],
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist'
+  },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist')
